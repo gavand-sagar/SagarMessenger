@@ -15,10 +15,17 @@ namespace SagarMessenger.Controllers
         //}
 
         [HttpPost("send")]
-        public Task<string> SendMessage(Message message)
+        public Task<string> SendMessage([FromBody] Message message)
         {
             return Task.FromResult("Sent");
             //return chatService.SendMessage(message);
+        }
+
+        [HttpGet()]
+        public async Task<IEnumerable<string>> GetMessages() {
+
+            return await Task.FromResult(new string[] { "Apple","Mango" });
+
         }
 
     }
