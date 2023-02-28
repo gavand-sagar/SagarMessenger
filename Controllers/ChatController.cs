@@ -8,11 +8,11 @@ namespace SagarMessenger.Controllers
     [ApiController]
     public class ChatController : ControllerBase
     {
-        ChatService chatService;
-        public ChatController(ChatService chatService)
-        {
-            this.chatService = chatService;
-        }
+        //ChatService chatService;
+        //public ChatController(ChatService chatService)
+        //{
+        //    this.chatService = chatService;
+        //}
 
         [HttpPost("send")]
         public Task<string> SendMessage(Message message)
